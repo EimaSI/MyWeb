@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Container</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #333;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #00ccff;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px; /* Space between the <p> elements */
+      padding: 40px;
+      background-color: #f2f2f2;
+      border-radius: 12px;
+      max-width: 1400px;
+      margin: 40px auto;
+    }
+    .container p {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      flex: 1; /* Equal size for both */
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">MySite</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Me</a></li>
+        </ul>
+      </div>
+  <div class="container">
+    <p>Left aligned paragraph</p>
+    <p>Right aligned paragraph</p>
+  </div>
+
+  <div class="container">
+    <h1> </h1>
+  </div>
+</body>
+</html>
