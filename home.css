@@ -1,0 +1,90 @@
+     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar-front {
+         height: 100vh; /* Full screen height */
+         background: url('images/Front1.png');
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-start; /* Keep navbar at the top */
+         position: relative;
+         opacity: 0;
+         animation: fadeIn 2s ease-in-out forwards;
+        
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #413d6400;
+      opacity: 85%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: center; /* Center nav links */
+      align-items: center;
+      box-sizing: border-box;
+      position: relative; /* Needed for absolute positioning */
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 25px;
+      font-weight: bold;
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #00ccff;
+      font-size: 25px;
+      transition: color 0.5s ease, font-size 0.3s ease;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px; /* Space between the <p> elements */
+      padding: 40px;
+      background-color: #f2f2f2;
+      border-radius: 12px;
+      max-width: 1400px;
+      margin: 40px auto;
+    }
+
+    .container p {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      flex: 1; /* Equal size for both */
+    }
+
+        @keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
