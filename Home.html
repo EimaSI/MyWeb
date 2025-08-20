@@ -2,38 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flexbox Container</title>
+  <title>MySite - GitHub & Figma Integrated</title>
+  <meta name="description" content="A static website with integrated GitHub-Figma workflow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="home.css">
+  <!-- Figma Embed Support -->
+  <script src="https://static.figma.com/embed_api.js"></script>
 </head>
 <body>
   <div class="navbar-front">
     <div class="navbar">
         <div class="logo">MySite</div>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About Me</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#design-system">Design</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="container info-box">
-      <p>Left aligned paragraph</p>
-      <p>Right aligned paragraph</p>
+    <div class="container info-box" id="home">
+      <div class="content-section">
+        <h2>Welcome to MySite</h2>
+        <p>This website demonstrates the integration between GitHub and Figma for seamless design-to-development workflows.</p>
+      </div>
+      <div class="content-section">
+        <h2>GitHub Integration</h2>
+        <p>Automated deployment via GitHub Actions, version control for designs, and collaborative development workflow.</p>
+      </div>
     </div>
 
-  <div class="container services-box">
-    <h1> </h1>
-  </div>\
+  <div class="container services-box" id="services">
+    <div class="content-section">
+      <h2>Our Services</h2>
+      <ul class="services-list">
+        <li>Web Development</li>
+        <li>UI/UX Design</li>
+        <li>Design System Creation</li>
+        <li>GitHub-Figma Integration</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="container Services-info">
-    <h1>
-      
-    </h1>
+    <div class="figma-embed-container">
+      <h2>Design System Preview</h2>
+      <p>Connect your Figma designs here by replacing the placeholder with your Figma file embed.</p>
+      <div class="figma-placeholder">
+        <p>🎨 Figma Design Embed</p>
+        <p>To embed your Figma design:</p>
+        <ol>
+          <li>Open your Figma file</li>
+          <li>Click Share → Copy embed code</li>
+          <li>Replace this placeholder with the embed iframe</li>
+        </ol>
+      </div>
+    </div>
   </div>
 
-  <div class="container about-me">
-    <h1></h1>
+  <div class="container about-me" id="about">
+    <div class="content-section">
+      <h2>About This Project</h2>
+      <p>This project demonstrates how to integrate GitHub with Figma for modern web development workflows.</p>
+    </div>
   </div>
+
+  <div class="container design-system" id="design-system">
+    <div class="content-section">
+      <h2>GitHub-Figma Integration Features</h2>
+      <div class="integration-features">
+        <div class="feature">
+          <h3>🚀 Automated Deployment</h3>
+          <p>GitHub Actions automatically deploys changes to GitHub Pages</p>
+        </div>
+        <div class="feature">
+          <h3>🎨 Design Integration</h3>
+          <p>Figma designs can be embedded directly into the website</p>
+        </div>
+        <div class="feature">
+          <h3>📝 Design Documentation</h3>
+          <p>Version-controlled design system documentation</p>
+        </div>
+        <div class="feature">
+          <h3>🔄 Workflow Automation</h3>
+          <p>Automated syncing between design changes and code updates</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Figma Integration JavaScript -->
+  <script>
+    // Function to initialize Figma embed (when you add your Figma file ID)
+    function initializeFigmaEmbed() {
+      // Replace 'YOUR_FIGMA_FILE_ID' with your actual Figma file ID
+      const figmaFileId = 'YOUR_FIGMA_FILE_ID';
+      
+      if (figmaFileId !== 'YOUR_FIGMA_FILE_ID') {
+        // This would initialize the Figma embed when you provide a real file ID
+        console.log('Figma integration ready for file:', figmaFileId);
+      }
+    }
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', initializeFigmaEmbed);
+  </script>
 </body>
 </html>

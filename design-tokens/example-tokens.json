@@ -1,0 +1,18 @@
+{
+  "colors": {
+    "primary": "#00ccff",
+    "secondary": "#413d64",
+    "white": "#ffffff",
+    "gray": "#f2f2f2"
+  },
+  "typography": {
+    "font-family": "Arial, sans-serif",
+    "font-size-base": "16px",
+    "font-size-large": "24px"
+  },
+  "spacing": {
+    "small": "8px",
+    "medium": "20px",
+    "large": "40px"
+  }
+}
