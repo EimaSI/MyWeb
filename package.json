@@ -1,0 +1,32 @@
+{
+  "name": "mywebsite-figma-integration",
+  "version": "1.0.0",
+  "description": "GitHub-Figma integration for MyWeb static site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Building static site...' && mkdir -p dist && cp *.html dist/ && cp *.css dist/ && cp -r Images dist/images",
+    "figma:sync": "node scripts/figma-sync.js",
+    "figma:tokens": "node scripts/extract-tokens.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EimaSI/MyWeb.git"
+  },
+  "keywords": [
+    "github",
+    "figma",
+    "static-site",
+    "integration",
+    "design-system"
+  ],
+  "author": "EimaSI",
+  "license": "MIT",
+  "devDependencies": {
+    "figma-api": "^1.11.0",
+    "node-fetch": "^3.3.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

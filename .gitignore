@@ -1,0 +1,16 @@
+# Add .figmarc to gitignore to protect sensitive tokens
+.figmarc
+*.env
+.env.*
+
+# Build artifacts
+_site/
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
